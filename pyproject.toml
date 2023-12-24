@@ -9,8 +9,33 @@ packages = [{include = "sqlalchemy_unit_of_work"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 sqlalchemy = "^2.0.19"
+fastapi = "^0.105.0"
+isort = "^5.12.0"
+black = "^23.9.1"
+flake8 = "^6.1.0"
+mypy = "^1.6.0"
+unify = "^0.5"
+autoflake = "^2.2.1"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''

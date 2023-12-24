@@ -1,10 +1,9 @@
 from typing import Generic, Iterable, TypeVar
 
 from sqlalchemy import delete, select, update
+from sqlalchemy.base import Base
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from src.base import Base
-from src.specifications import FilterSpecification, Specification, TQuery
+from sqlalchemy.specifications import FilterSpecification, Specification, TQuery
 
 
 TModel = TypeVar("TModel", bound=Base)
